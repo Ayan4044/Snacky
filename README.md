@@ -1,6 +1,6 @@
 "# SnackyMessages" 
 
-![Sample UI](https://github.com/Ayan4044/Snacky/blob/master/Snacky.jpeg)
+![Sample UI](https://github.com/Ayan4044/Snacky/blob/master/Snacky.png)
 
 **Customize Snackbar messages with background colors**
      
