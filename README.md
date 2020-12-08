@@ -1,7 +1,7 @@
 "# SnackyMessages" 
 
 
-![Screenshot](https://github.com/Ayan4044/Snacky/blob/master/Snacky.png)
+
 
 **Customize Snackbar messages with background colors**
      
@@ -19,6 +19,11 @@
                Toast.makeText(applicationContext,"Heelo",Toast.LENGTH_LONG).show()
             }
         })
+        
+        
+![Screenshot](https://github.com/Ayan4044/Snacky/blob/main/Snacky.png)
+        
+        
         
 ###### For Java
      
