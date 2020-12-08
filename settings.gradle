@@ -1,0 +1,3 @@
+include ':SnackyMessages'
+include ':app'
+rootProject.name = "Snacky"

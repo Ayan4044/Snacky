@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Snacky.iml" filepath="$PROJECT_DIR$/.idea/modules/Snacky.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SnackyMessages/Snacky.SnackyMessages.iml" filepath="$PROJECT_DIR$/.idea/modules/SnackyMessages/Snacky.SnackyMessages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Snacky.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Snacky.app.iml" />
+    </modules>
+  </component>
+</project>
