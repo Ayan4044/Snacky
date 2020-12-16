@@ -3,10 +3,10 @@
 
 
 
-**Customize Snackbar messages with background colors**
+**Customize Snackbar messages with icons and action**
      
      maven { url 'https://jitpack.io' }
-     implementation 'com.github.Ayan4044:Snacky:0.0.1'
+     implementation 'com.github.Ayan4044:Snacky:0.0.2'
 
 ###### For Kotlin
 
@@ -21,7 +21,7 @@
         })
         
         
-![Screenshot](https://github.com/Ayan4044/Snacky/blob/main/Snacky.png)
+![Screenshot](https://github.com/Ayan4044/Snacky/blob/main/snacy.jpeg)
         
         
         
