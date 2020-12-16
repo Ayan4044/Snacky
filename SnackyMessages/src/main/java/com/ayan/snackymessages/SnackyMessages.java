@@ -1,16 +1,21 @@
 package com.ayan.snackymessages;
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Color;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+
 import com.google.android.material.snackbar.Snackbar;
 
 public class SnackyMessages {
 
-    public void ShowSnackBarEror(View rootView, String message, int layoutID, int colorid){
+    public void ShowSnackBarEror(View rootView, String message, int layoutID){
         Snackbar snackbar = Snackbar.make(rootView.findViewById(layoutID),message, Snackbar.LENGTH_LONG);
         View sbView = snackbar.getView();
-        sbView.setBackgroundResource(colorid);
+        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_error, 0, 0, 0);
+        textView.setCompoundDrawablePadding(10);
+        sbView.setBackgroundResource(R.drawable.rounded_corner_error);
         snackbar.show();
     }
 
@@ -18,14 +23,20 @@ public class SnackyMessages {
     public void ShowSnackbarInfo(View rootView, String message, int layoutID,int colorid){
         Snackbar snackbar = Snackbar.make(rootView.findViewById(layoutID), message, Snackbar.LENGTH_LONG);
         View sbView = snackbar.getView();
-        sbView.setBackgroundResource(colorid);
+        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
+        textView.setCompoundDrawablePadding(10);
+        sbView.setBackgroundResource(R.drawable.rounded_corner_info);
         snackbar.show();
     }
 
-    public void ShowSnackbarSuccess(View rootView, String message, int layoutID,int colorid){
+    public void ShowSnackbarSuccess(View rootView, String message, int layoutID){
         Snackbar snackbar = Snackbar.make(rootView.findViewById(layoutID), message, Snackbar.LENGTH_LONG);
         View sbView = snackbar.getView();
-        sbView.setBackgroundResource(colorid);
+        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_sueccess, 0, 0, 0);
+        textView.setCompoundDrawablePadding(10);
+        sbView.setBackgroundResource(R.drawable.rounded_corner_success);
         snackbar.show();
     }
 
@@ -35,13 +46,17 @@ public class SnackyMessages {
         void execute();
     }
 
-    public void SnackbarAction(View view, String custommessage, int layoutID,int colorid, ExecuteFunction command)
+    public void SnackbarAction(View view, String custommessage, int layoutID,String actionname, ExecuteFunction command)
     {
         final Snackbar snackBar = Snackbar.make(view.findViewById(layoutID), custommessage,    Snackbar.LENGTH_INDEFINITE);
         View sbView = snackBar.getView();
-        sbView.setBackgroundResource(colorid);
+        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
+        textView.setCompoundDrawablePadding(10);
+        // sbView.setBackgroundResource(colorid);
+        sbView.setBackgroundResource(R.drawable.round_corner_action);
         snackBar.setActionTextColor(Color.parseColor("#FAFAFA"));
-        snackBar.setAction("Ok", new View.OnClickListener() {
+        snackBar.setAction(actionname, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 command.execute();
@@ -53,13 +68,18 @@ public class SnackyMessages {
     }
 
 
-    public void SnackbarActionActivity(Activity getactivity, String custommessage, int layoutID, int colorid, ExecuteFunction command)
+    public void SnackbarActionActivity(Activity getactivity, String custommessage, int layoutID,String actionname, ExecuteFunction command)
     {
         final Snackbar snackBar = Snackbar.make(getactivity.findViewById(layoutID), custommessage, Snackbar.LENGTH_INDEFINITE);
         View sbView = snackBar.getView();
-        sbView.setBackgroundResource(colorid);
+
+        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
+       textView.setCompoundDrawablePadding(10);
+       // sbView.setBackgroundResource(colorid);
+        sbView.setBackgroundResource(R.drawable.round_corner_action);
         snackBar.setActionTextColor(Color.parseColor("#FAFAFA"));
-        snackBar.setAction("Ok", new View.OnClickListener() {
+        snackBar.setAction(actionname, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 command.execute();
@@ -70,27 +90,36 @@ public class SnackyMessages {
 
     }
 
-    public void ShowSnackbarSuccess(Activity getactivity, String message, int colorid, int layoutID) {
+    public void ShowSnackbarSuccess(Activity getactivity, String message, int layoutID) {
         Snackbar snackbar=Snackbar.make(getactivity.findViewById(layoutID), message, Snackbar.LENGTH_LONG);
         View sbView=snackbar.getView();
-        sbView.setBackgroundResource(colorid);
+        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_sueccess, 0, 0, 0);
+        textView.setCompoundDrawablePadding(10);
+        sbView.setBackgroundResource(R.drawable.rounded_corner_success);
         snackbar.show();
     }
 
-    public void ShowSnackbarInfo(Activity getactivity, String message,int colorid,int layoutID){
+    public void ShowSnackbarInfo(Activity getactivity, String message,int layoutID){
         Snackbar snackbar=Snackbar.make(getactivity.findViewById(layoutID), message, Snackbar.LENGTH_LONG);
         View sbView=snackbar.getView();
-        sbView.setBackgroundResource(colorid);
+        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
+        textView.setCompoundDrawablePadding(10);
+        sbView.setBackgroundResource(R.drawable.rounded_corner_info);
         snackbar.show();
     }
 
 
 
-    public void ShowSnackBarEror(Activity getacActivity, String message, int colorid, int layoutid)
+    public void ShowSnackBarEror(Activity getacActivity, String message, int layoutid)
     {
         Snackbar snackbar=Snackbar.make(getacActivity.findViewById(layoutid), message, Snackbar.LENGTH_LONG);
         View sbView=snackbar.getView();
-        sbView.setBackgroundResource(colorid);
+        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_error, 0, 0, 0);
+        textView.setCompoundDrawablePadding(10);
+        sbView.setBackgroundResource(R.drawable.rounded_corner_error);
         snackbar.show();
     }
 }

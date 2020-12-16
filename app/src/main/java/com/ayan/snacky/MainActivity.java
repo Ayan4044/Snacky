@@ -15,9 +15,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        SnackyMessages snackyMessages=new SnackyMessages();
+        snackyMessages.SnackbarActionActivity(this, "Something went wrong", R.id.mainlayout, "Retry", new SnackyMessages.ExecuteFunction() {
+            @Override
+            public void execute() {
+              snackyMessages.ShowSnackBarEror(MainActivity.this,"Hello",R.id.mainlayout);
+            }
+        });
 
 
     }
+
 
 }
