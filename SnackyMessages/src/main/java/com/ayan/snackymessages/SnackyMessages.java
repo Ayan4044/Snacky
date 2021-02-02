@@ -236,17 +236,17 @@ public class SnackyMessages {
     }
 
 
-//    public void ShowSnackBarIndefinite(View view, String message, int layoutid)
-//    {
-//        Snackbar snackbar=Snackbar.make(view.findViewById(layoutid), message, Snackbar.LENGTH_INDEFINITE);
-//        View sbView=snackbar.getView();
-//        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
-//        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
-//        textView.setCompoundDrawablePadding(10);
-//        sbView.setBackgroundResource(R.drawable.round_corner_action);
-//        snackbar.show();
-//    }
-//
+    public void ShowSnackBarIndefinite(View view, String message, int layoutid)
+    {
+        snackySnackbar=Snackbar.make(view.findViewById(layoutid), message, Snackbar.LENGTH_INDEFINITE);
+        View sbView=snackySnackbar.getView();
+        snackyTextview = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        snackyTextview.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
+        snackyTextview.setCompoundDrawablePadding(10);
+        sbView.setBackgroundResource(R.drawable.round_corner_action);
+        snackySnackbar.show();
+    }
+
     public void ShowSnackBarIndefinite(Activity getactiivty, String message, int layoutid)
     {
 
