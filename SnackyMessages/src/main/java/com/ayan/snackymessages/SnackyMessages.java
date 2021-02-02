@@ -8,7 +8,9 @@ import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 
 public class SnackyMessages {
-
+    public  Snackbar snackySnackbar;
+    public TextView snackyTextview;
+    public View snacyView;
     public void ShowSnackBarEror(View rootView, String message, int layoutID){
         Snackbar snackbar = Snackbar.make(rootView.findViewById(layoutID),message, Snackbar.LENGTH_LONG);
         View sbView = snackbar.getView();
@@ -207,5 +209,53 @@ public class SnackyMessages {
         textView.setCompoundDrawablePadding(10);
         sbView.setBackgroundResource(R.drawable.rounded_corner_error);
         snackbar.show();
+    }
+
+
+    public void ShowSnackBar(Activity getacActivity, String message, int layoutid)
+    {
+        Snackbar snackbar=Snackbar.make(getacActivity.findViewById(layoutid), message, Snackbar.LENGTH_LONG);
+        View sbView=snackbar.getView();
+        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
+        textView.setCompoundDrawablePadding(10);
+        sbView.setBackgroundResource(R.drawable.round_corner_action);
+        snackbar.show();
+    }
+
+
+    public void ShowSnackBar(View view, String message, int layoutid)
+    {
+        Snackbar snackbar=Snackbar.make(view.findViewById(layoutid), message, Snackbar.LENGTH_LONG);
+        View sbView=snackbar.getView();
+        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
+        textView.setCompoundDrawablePadding(10);
+        sbView.setBackgroundResource(R.drawable.round_corner_action);
+        snackbar.show();
+    }
+
+
+//    public void ShowSnackBarIndefinite(View view, String message, int layoutid)
+//    {
+//        Snackbar snackbar=Snackbar.make(view.findViewById(layoutid), message, Snackbar.LENGTH_INDEFINITE);
+//        View sbView=snackbar.getView();
+//        TextView textView = (TextView)sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+//        textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
+//        textView.setCompoundDrawablePadding(10);
+//        sbView.setBackgroundResource(R.drawable.round_corner_action);
+//        snackbar.show();
+//    }
+//
+    public void ShowSnackBarIndefinite(Activity getactiivty, String message, int layoutid)
+    {
+
+        snackySnackbar=Snackbar.make(getactiivty.findViewById(layoutid), message, Snackbar.LENGTH_INDEFINITE);
+        snacyView=snackySnackbar.getView();
+        snackyTextview = (TextView)snacyView.findViewById(com.google.android.material.R.id.snackbar_text);
+        snackyTextview.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
+        snackyTextview.setCompoundDrawablePadding(10);
+        snacyView.setBackgroundResource(R.drawable.round_corner_action);
+        snackySnackbar.show();
     }
 }
