@@ -249,7 +249,6 @@ public class SnackyMessages {
 
     public void ShowSnackBarIndefinite(Activity getactiivty, String message, int layoutid)
     {
-
         snackySnackbar=Snackbar.make(getactiivty.findViewById(layoutid), message, Snackbar.LENGTH_INDEFINITE);
         snacyView=snackySnackbar.getView();
         snackyTextview = (TextView)snacyView.findViewById(com.google.android.material.R.id.snackbar_text);
