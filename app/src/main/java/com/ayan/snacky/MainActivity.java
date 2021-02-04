@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
 
                     snackyMessages.snackyTextview.setText("File Sent");
-                        //textView.setText("File Sent");
-                       // outerSnackBar.dismiss();
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
