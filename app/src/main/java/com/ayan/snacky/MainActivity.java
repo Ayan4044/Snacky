@@ -23,25 +23,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SnackyMessages snackyMessages=new SnackyMessages();
-        snackyMessages.SnackbarActionSucess(this, "Something went wrong", R.id.mainlayout, "Retry", new SnackyMessages.ExecuteFunction() {
-            @Override
-            public void execute() {
-              snackyMessages.ShowSnackBarIndefinite(MainActivity.this,"Sending...",R.id.mainlayout);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-                    snackyMessages.snackyTextview.setText("File Sent");
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                snackyMessages.snackySnackbar.dismiss();
-                            }},500);
-                    }
-                }, 2000);
-            }
-      });
-
+//        snackyMessages.SnackbarActionSucess(this, "Something went wrong", R.id.mainlayout, "Retry", new SnackyMessages.ExecuteFunction() {
+//            @Override
+//            public void execute() {
+//              snackyMessages.ShowSnackBarIndefinite(MainActivity.this,"Sending...",R.id.mainlayout);
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//
+//                    snackyMessages.snackyTextview.setText("File Sent");
+//                        new Handler().postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                snackyMessages.snackySnackbar.dismiss();
+//                            }},500);
+//                    }
+//                }, 2000);
+//            }
+//      });
+    snackyMessages.ShowSnackbarSuccessActionGlass(this, "File Sent", R.id.mainlayout, "Ok", new SnackyMessages.ExecuteFunction() {
+        @Override
+        public void execute() {
+            snackyMessages.ShowSnackBarIndefiniteLite(MainActivity.this,"Waiting..",R.id.mainlayout);
+        }
+    });
 
 
 
