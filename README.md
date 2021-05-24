@@ -21,9 +21,14 @@
             }
         })
         
+        ![Screenshot](https://github.com/Ayan4044/Snacky/blob/main/snacy.jpeg)
         
-![Screenshot](https://github.com/Ayan4044/Snacky/blob/main/snacy.jpeg)
         
+         snacky.ShowSnackbarSuccessLite(fragmentFeedbackView,"Feedback Submitted!!",R.id.feedback_fragment)
+         
+         ![Screenshot](https://github.com/Ayan4044/Snacky/blob/main/snackbar_lite_success.png)
+        
+
         
         
 ###### For Java
