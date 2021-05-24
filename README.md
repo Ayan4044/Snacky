@@ -3,10 +3,10 @@
 
 
 
-**Customize Snackbar messages with icons and action**
+**Customized Snackbar messages messages and action**
      
      maven { url 'https://jitpack.io' }
-     implementation 'com.github.Ayan4044:Snacky:0.0.2'
+     implementation 'com.github.Ayan4044:Snacky:0.0.8'
 
 ###### For Kotlin
 
