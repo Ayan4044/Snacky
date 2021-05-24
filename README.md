@@ -1,7 +1,7 @@
 "# SnackyMessages" 
 
 
-
+![Screenshot](https://github.com/Ayan4044/Snacky/blob/main/snackbar_lite.jpeg)
 
 **Customized Snackbar messages messages and action**
      
@@ -39,4 +39,7 @@
             }
         });
     
+      snackyMessages.ShowSnackBarEror(fragmentFormTwoView,"Please Select a Blood Group",R.id.fragmentRequest)
+ 
+ ![Screenshot](https://github.com/Ayan4044/Snacky/blob/main/snackbar_errorpng.png)
 
